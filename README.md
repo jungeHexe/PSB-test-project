@@ -1,27 +1,12 @@
-# PsbProject
+# Тестовое задание на Frontend-разработчика в ПСБ
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Создать страницу на которой будет отображаться текущая погода по выбранному городу и погода на каждый час.
 
-## Development server
+Обязательное требование – использование чистого JavaScript без фреймворков( но если есть знание Angular, то используя этот фреймворк).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Создать поле для ввода названия города
+2. После ввода названия города получить данные о погоде по этому городу используя сервис https://www.weatherapi.com/api-explorer.aspx#forecast (для тестового задания можно использовать api key 82945af918e8480bbfb74726240407)
+3. Вывести текущую погоду(температура, влажность, давление, облачность) по указанному в п.1 городу.
+4. Вывести таблицу погоды по часам со строками, в которых будет указано время, температура, облачность, давление, влажность на каждый час суток.
+5. Визуализировать графически, используя библиотеку Apache ECharts (https://echarts.apache.org/examples/en/editor.html?c=bar-simple) почасовую температуру, давление, влажность в зависимости от выбранного фильтра(температура, давление, влажность) используя библиотеку визуализации данных Apache ECharts https://www.npmjs.com/package/echarts
+6. Дизайн не важен, на ваше усмотрение. Данное тестовое задание предназначено для понимания умений пользоваться rest api, базовой версткой и использования библиотек визуализации данных.
