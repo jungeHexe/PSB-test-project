@@ -1,0 +1,10 @@
+.diagram-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  flex-grow: 1;
+  overflow: hidden;
+}

@@ -7,7 +7,7 @@
         <th scope="col">Температура (°C)</th>
         <th scope="col">Влажность (%)</th>
         <th scope="col">Облачность (%)</th>
-        <th scope="col">Давление (мм рт.ст.)</th>
+        <th scope="col">Давление (мбар)</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +16,7 @@
         <td>{{ weather.temp_c }}</td>
         <td>{{ weather.humidity }}</td>
         <td>{{ weather.cloud }}</td>
-        <td>{{ weather.pressure_mb | toRussianPressure }}</td>
+        <td>{{ weather.pressure_mb }}</td>
       </tr>
     </tbody>
   </table>
