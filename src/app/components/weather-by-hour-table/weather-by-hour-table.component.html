@@ -1,0 +1,23 @@
+<div *ngIf="weatherData?.length">
+  <h5>Погода по часам</h5>
+  <table class="table mt-1 table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Время</th>
+        <th scope="col">Температура (°C)</th>
+        <th scope="col">Влажность (%)</th>
+        <th scope="col">Облачность (%)</th>
+        <th scope="col">Давление (мм рт.ст.)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let weather of weatherData; index as i">
+        <th scope="row">{{ weather.time && weather.time.split(' ')[1] }}</th>
+        <td>{{ weather.temp_c }}</td>
+        <td>{{ weather.humidity }}</td>
+        <td>{{ weather.cloud }}</td>
+        <td>{{ weather.pressure_mb | toRussianPressure }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
