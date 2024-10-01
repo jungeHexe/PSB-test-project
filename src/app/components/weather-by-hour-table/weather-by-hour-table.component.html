@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let weather of weatherData; index as i">
+      <tr *ngFor="let weather of weatherData">
         <th scope="row">{{ weather.time && weather.time.split(' ')[1] }}</th>
         <td>{{ weather.temp_c }}</td>
         <td>{{ weather.humidity }}</td>

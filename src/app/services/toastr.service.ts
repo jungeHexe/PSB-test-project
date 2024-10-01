@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {BehaviorSubject} from "rxjs";
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 export interface ToastInfo {
   body: string;
@@ -16,6 +16,6 @@ export class ToastrService {
   }
 
   remove(toast: ToastInfo): void {
-    this.toasts$.next(this.toasts$.value.filter(t => t != toast));
+    this.toasts$.next(this.toasts$.value.filter(t => t !== toast));
   }
 }

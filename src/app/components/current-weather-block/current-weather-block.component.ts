@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {WeatherOnHour} from "../../model/weather-on-hour.model";
+import {WeatherOnHour} from '../../model/weather-on-hour.model';
 
 @Component({
   selector: 'app-current-weather-block',

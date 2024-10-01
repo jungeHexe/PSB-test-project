@@ -8,16 +8,18 @@
              [formControl]="searchFormControl"
       />
   </div>
-  <ng-container *ngIf="!(isLoading$ | async);else loader">
-    <app-current-weather-block
-      [weatherData]="weatherData$.value?.current"
-    ></app-current-weather-block>
-    <app-weather-by-hour-table
-      [weatherData]="weatherData$.value?.weatherByHours"
-    ></app-weather-by-hour-table>
-    <app-weather-diagram-bar
-      [weatherData]="weatherData$.value?.weatherByHours"
-    ></app-weather-diagram-bar>
+  <ng-container *ngIf="!(isLoading$ | async); else loader">
+    <ng-container *ngIf="weatherData$ | async; else emptyData">
+      <app-current-weather-block
+        [weatherData]="weatherData$.value?.current"
+      ></app-current-weather-block>
+      <app-weather-by-hour-table
+        [weatherData]="weatherData$.value?.weatherByHours"
+      ></app-weather-by-hour-table>
+      <app-weather-diagram-bar
+        [weatherData]="weatherData$.value?.weatherByHours"
+      ></app-weather-diagram-bar>
+    </ng-container>
   </ng-container>
 </main>
 
@@ -26,11 +28,16 @@
   [autohide]="true"
   [class]="toast.className"
   [delay]="toast.delay || 3000"
-  (hidden)="toastrService.remove(toast)"
->{{toast.body}}</ngb-toast>
+  (hidden)="toastrService.remove(toast)">
+  {{toast.body}}
+</ngb-toast>
 
 <ng-template #loader>
-  <div class="m-auto spinner-border" role="status">
+  <div class="my-5 mx-auto spinner-border" role="status">
     <span class="sr-only"></span>
   </div>
+</ng-template>
+
+<ng-template #emptyData>
+  <p class="mx-auto my-5">Данные о погоде не найдены. Попробуйте ввести название существующего города.</p>
 </ng-template>

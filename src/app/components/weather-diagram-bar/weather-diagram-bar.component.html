@@ -1,13 +1,12 @@
-<div class="diagram-container mt-4" *ngIf="weatherData">
+<div class="mt-4" *ngIf="weatherData">
   <h5>График изменения погоды</h5>
   <ng-select
     class="my-2 w-25"
-    [items]="xValues"
+    [items]="yValues"
     [bindLabel]="'value'"
     [formControl]="selectFormControl">
   </ng-select>
   <div
-    class="body"
     echarts
     [options]="echartsOptions"
     [extentions]="echartsExtensions"

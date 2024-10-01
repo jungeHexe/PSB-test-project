@@ -1,11 +1,11 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpParams} from "@angular/common/http";
-import {environment} from "../../environments/environment";
-import {catchError, map, Observable, of} from "rxjs";
-import {WeatherApiResponse} from "../model/weather-api-response.model";
-import {WeatherByCityData} from "../model/weather-by-city-data.model";
-import {ToastrService} from "./toastr.service";
-import {ToastrTypeClass} from "../app.constants";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {environment} from '../../environments/environment';
+import {catchError, map, Observable, of} from 'rxjs';
+import {WeatherApiResponse} from '../model/weather-api-response.model';
+import {WeatherByCityData} from '../model/weather-by-city-data.model';
+import {ToastrService} from './toastr.service';
+import {ToastrTypeClass} from '../app.constants';
 
 @Injectable({ providedIn: 'root' })
 export class WeatherService {

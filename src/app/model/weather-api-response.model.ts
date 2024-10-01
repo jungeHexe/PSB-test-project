@@ -1,4 +1,4 @@
-import {WeatherOnHour} from "./weather-on-hour.model";
+import {WeatherOnHour} from './weather-on-hour.model';
 
 export interface WeatherApiResponse {
   current?: WeatherOnHour;
