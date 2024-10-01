@@ -9,7 +9,7 @@ import {WeatherOnHour} from "../../model/weather-on-hour.model";
 })
 export class CurrentWeatherBlockComponent {
 
-  @Input() weatherData: WeatherOnHour | undefined = undefined;
+  @Input() weatherData: WeatherOnHour | undefined;
 
   readonly TODAY = new Date().toLocaleString();
 }

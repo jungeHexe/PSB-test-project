@@ -12,10 +12,12 @@
     <app-current-weather-block
       [weatherData]="weatherData$.value?.current"
     ></app-current-weather-block>
-
     <app-weather-by-hour-table
       [weatherData]="weatherData$.value?.weatherByHours"
     ></app-weather-by-hour-table>
+    <app-weather-diagram-bar
+      [weatherData]="weatherData$.value?.weatherByHours"
+    ></app-weather-diagram-bar>
   </ng-container>
 </main>
 

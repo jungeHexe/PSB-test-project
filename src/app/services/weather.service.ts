@@ -36,7 +36,7 @@ export class WeatherService {
         map((response: WeatherApiResponse | null) => {
           if (response) {
             return {
-              current: response?.current,
+              current: response.current,
               weatherByHours: response?.forecast?.forecastday?.map(o => o.hour).flat(),
             };
           }

@@ -1,22 +1,22 @@
-export class WeatherOnHour {
+export interface WeatherOnHour {
   /**
    * Дата и время в ISO
    */
-  time?: string;
+  time: string;
   /**
    * Температура в Цельсиях
    */
-  temp_c?: number;
+  temp_c: number;
   /**
-   * Давление в миллибарах (1 миллибар [мбар] = 0,750063755419211 миллиметр ртутного столба)
+   * Давление в миллибарах
    */
-  pressure_mb?: number;
+  pressure_mb: number;
   /**
    * Влажность в процентах
    */
-  humidity?: number;
+  humidity: number;
   /**
    * Облачность в процентах
    */
-  cloud?: number;
+  cloud: number;
 }
